@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">C0737616_OntarioElectricityBill</string>
+    <string name="enter_e_mail">Enter E-Mail</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="customer_name">Customer Name : </string>
+    <string name="customer_account_number">Customer Account Number : </string>
+    <string name="customer_meter_number">Customer Meter Number :</string>
+    <string name="step_1">Step 1 :</string>
+    <string name="step_2">Step 2 :</string>
+</resources>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ElectricityBillActivity"
+    android:background="@android:color/holo_orange_light"
+    >
+
+    <TextView
+        android:id="@+id/txtCustomerName"
+        style="@style/AlertDialog.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/customer_name" />
+    <TextView
+        android:id="@+id/txtCustomerAccNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/customer_account_number"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_below="@+id/txtCustomerName"
+        style="@style/AlertDialog.AppCompat.Light"
+        />
+    <TextView
+        android:id="@+id/txtCustomerMeterNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCustomerAccNumber"
+        android:text="@string/customer_meter_number"
+        android:gravity="center"
+        android:padding="5dp"
+        style="@style/AlertDialog.AppCompat.Light"
+        />
+    <TextView
+        android:id="@+id/step1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCustomerMeterNum"
+        android:text="@string/step_1"
+        android:textColor="@android:color/holo_blue_dark"
+        style="@android:style/Theme.Light"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Monthly Usage :"
+        android:layout_below="@+id/step1"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:id="@+id/monthlydetails"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Monthly Usage : "
+        android:layout_below="@+id/monthlydetails"
+        android:padding="8dp"
+        />
+
+    <EditText
+        android:id="@+id/monthlyUsage"
+        android:layout_width="74dp"
+        android:layout_height="34dp"
+        android:layout_below="@+id/monthlydetails"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/txtkwh"
+        android:layout_width="46dp"
+        android:layout_height="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/monthlydetails"
+        android:layout_marginEnd="100dp"
+        android:text="KWh"
+        android:textSize="15dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="149dp"
+        android:layout_height="23dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="176dp"
+        android:gravity="center"
+        android:text="Select Your Pricing Plan :"
+        android:textSize="12dp" />
+
+    <RadioGroup
+        android:id="@+id/btngroupPrice"
+        android:layout_width="214dp"
+        android:layout_height="48dp"
+        android:layout_alignStart="@+id/monthlyUsage"
+        android:layout_alignTop="@+id/txtPrice">
+
+        <RadioButton
+            android:id="@+id/rbTiedP"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Tiered Pricing" />
+
+        <RadioButton
+            android:id="@+id/rbTimeP"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:text="Time-of-use-Pricing" />
+    </RadioGroup>
+
+<TextView
+    android:id="@+id/adjustComp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Adjust Your Consumption(in %) - (optional)"
+    android:layout_below="@+id/btngroupPrice"
+    android:padding="5dp"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/adjustComp"
+        android:text="Off-Peak" />
+
+    <EditText
+        android:layout_width="33dp"
+        android:layout_height="22dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/adjustComp"
+        android:layout_marginStart="68dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/adjustComp"
+        android:layout_marginStart="110dp"
+        android:text="Mid-Peak" />
+
+    <EditText
+        android:layout_width="33dp"
+        android:layout_height="22dp"
+        android:layout_below="@+id/adjustComp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtkwh"
+        android:layout_below="@+id/adjustComp"
+        android:text="On-Peak" />
+
+    <EditText
+        android:layout_width="33dp"
+        android:layout_height="22dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/adjustComp"
+        android:layout_marginEnd="47dp" />
+
+    <TextView
+        android:id="@+id/step2"
+        style="@android:style/Theme.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="204dp"
+        android:text="@string/step_2"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/oesp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="164dp"
+        android:gravity="left"
+        android:text="Enter Your Ontario Electricity Program (OESP) credit amount (if Applicable) :"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/monthcredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="136dp"
+        android:text="Your OESP monthly credit(e.g.$35): " />
+
+    <EditText
+        android:id="@+id/oespCredit"
+        android:layout_width="74dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/oesp"
+        android:layout_toEndOf="@+id/monthlyUsage" />
+
+    <TextView
+        android:id="@+id/see"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/step3"
+        android:text="See how your bill might look on a contract with  an energy retailer :"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/step3"
+        style="@android:style/Theme.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/monthcredit"
+        android:layout_marginTop="-136dp"
+        android:text="Optional :"
+        android:textColor="@android:color/holo_blue_dark" />
+</RelativeLayout>
+
